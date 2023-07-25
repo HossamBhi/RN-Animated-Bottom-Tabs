@@ -12,6 +12,7 @@ import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import BottomsTabs from './src/BottomsTabs';
+import BottomTabsWaves from './src/Navigation/BottomTabsWaves';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -32,7 +33,8 @@ function App(): JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <NavigationContainer >
-        <BottomsTabs />
+        {/* <BottomsTabs /> */}
+        <BottomTabsWaves />
       </NavigationContainer>
     </SafeAreaView>
   );
