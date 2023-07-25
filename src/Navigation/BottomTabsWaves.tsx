@@ -52,7 +52,7 @@ const BottomTabsWaves = () => {
         }}
         component={PlaceholderScreen}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Upload"
         options={{
           // @ts-ignore
@@ -66,7 +66,7 @@ const BottomTabsWaves = () => {
           ),
         }}
         component={PlaceholderScreen}
-      />
+      /> */}
       <Tab.Screen
         name="Chat"
         options={{
@@ -115,7 +115,7 @@ const AnimatedTabBar = ({
   descriptors,
 }: BottomTabBarProps) => {
   const {bottom} = useSafeAreaInsets();
-console.log({bottom})
+  console.log({bottom});
   // get information about the components position on the screen -----
 
   const reducer = (state: any, action: {x: number; index: number}) => {
@@ -161,7 +161,7 @@ console.log({bottom})
         style={[styles.activeBackground, animatedStyles]}>
         <Path
           fill="#123456"
-          d="M20 0H0c11.046 0 20 8.953 20 20v5c0 19.33 15.67 35 35 35s35-15.67 35-35v-5c0-11.045 8.954-20 20-20H20z"
+          d="M20 0H0c11.046 0 20 8.953 20 20v5c0 19.33 15.67 35 35 35s35-15.67 35-35v-5c0-20.045 8.954-20 20-20H20z"
         />
       </AnimatedSvg>
 
@@ -247,6 +247,7 @@ const TabBarComponent = ({
 const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: 'white',
+    height: 61,
   },
   activeBackground: {
     position: 'absolute',
